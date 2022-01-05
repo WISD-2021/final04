@@ -14,4 +14,24 @@ class Item extends Model
         'money',
         'image',
     ];
+
+    public function members()
+    {
+        return $this->belongsToMany(Member::class);
+    }
+
+    public function managers()
+    {
+        return $this->belongsTo(Manager::class);
+    }
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
+
+    public function types()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

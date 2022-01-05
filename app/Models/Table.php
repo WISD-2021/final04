@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Table extends Model
 {
     use HasFactory;
+
+    public function reserves()
+    {
+        return $this->belongsTo(Reserve::class);
+    }
+
+    public function managers()
+    {
+        return $this->belongsTo(Manager::class);
+    }
 }

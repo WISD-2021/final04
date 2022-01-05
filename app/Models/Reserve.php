@@ -12,4 +12,14 @@ class Reserve extends Model
     protected $fillable = [
         'person',
     ];
+
+    public function members()
+    {
+        return $this->belongsTo(Member::class);
+    }
+
+    public function tables()
+    {
+        return $this->hasMany(Table::class);
+    }
 }

@@ -12,4 +12,14 @@ class Type extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function items()
+    {
+        return $this->hasMany(Item::class);
+    }
+
+    public function managers()
+    {
+        return $this->belongsTo(Manager::class);
+    }
 }
