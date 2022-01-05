@@ -15,6 +15,12 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
+            $table->Integer('type_id');
+            $table->foreign('type_id')->references('id')->on('types');
+            $table->string('name');;
+            $table->Integer('money');
+            $table->string('image');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
