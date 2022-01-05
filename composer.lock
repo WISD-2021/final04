@@ -8,6 +8,7 @@
     "packages": [
         {
             "name": "asm89/stack-cors",
+<<<<<<< HEAD
             "version": "v2.0.3",
             "source": {
                 "type": "git",
@@ -18,12 +19,29 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/asm89/stack-cors/zipball/9cb795bf30988e8c96dd3c40623c48a877bc6714",
                 "reference": "9cb795bf30988e8c96dd3c40623c48a877bc6714",
+=======
+            "version": "v2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asm89/stack-cors.git",
+                "reference": "7a198ec737e926eab15d29368fc6fff66772b0e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asm89/stack-cors/zipball/7a198ec737e926eab15d29368fc6fff66772b0e2",
+                "reference": "7a198ec737e926eab15d29368fc6fff66772b0e2",
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
                 "shasum": ""
             },
             "require": {
                 "php": "^7.0|^8.0",
+<<<<<<< HEAD
                 "symfony/http-foundation": "~2.7|~3.0|~4.0|~5.0",
                 "symfony/http-kernel": "~2.7|~3.0|~4.0|~5.0"
+=======
+                "symfony/http-foundation": "~2.7|~3.0|~4.0|~5.0|~6.0",
+                "symfony/http-kernel": "~2.7|~3.0|~4.0|~5.0|~6.0"
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
             },
             "require-dev": {
                 "phpunit/phpunit": "^6|^7|^8|^9",
@@ -58,9 +76,15 @@
             ],
             "support": {
                 "issues": "https://github.com/asm89/stack-cors/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/asm89/stack-cors/tree/v2.0.3"
             },
             "time": "2021-03-11T06:42:03+00:00"
+=======
+                "source": "https://github.com/asm89/stack-cors/tree/v2.0.5"
+            },
+            "time": "2022-01-03T15:27:13+00:00"
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -524,6 +548,7 @@
         },
         {
             "name": "fruitcake/laravel-cors",
+<<<<<<< HEAD
             "version": "v2.0.4",
             "source": {
                 "type": "git",
@@ -534,6 +559,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/fruitcake/laravel-cors/zipball/a8ccedc7ca95189ead0e407c43b530dc17791d6a",
                 "reference": "a8ccedc7ca95189ead0e407c43b530dc17791d6a",
+=======
+            "version": "v2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fruitcake/laravel-cors.git",
+                "reference": "3a066e5cac32e2d1cdaacd6b961692778f37b5fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fruitcake/laravel-cors/zipball/3a066e5cac32e2d1cdaacd6b961692778f37b5fc",
+                "reference": "3a066e5cac32e2d1cdaacd6b961692778f37b5fc",
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
                 "shasum": ""
             },
             "require": {
@@ -541,11 +578,19 @@
                 "illuminate/contracts": "^6|^7|^8|^9",
                 "illuminate/support": "^6|^7|^8|^9",
                 "php": ">=7.2",
+<<<<<<< HEAD
                 "symfony/http-foundation": "^4|^5",
                 "symfony/http-kernel": "^4.3.4|^5"
             },
             "require-dev": {
                 "laravel/framework": "^6|^7|^8",
+=======
+                "symfony/http-foundation": "^4|^5|^6",
+                "symfony/http-kernel": "^4.3.4|^5|^6"
+            },
+            "require-dev": {
+                "laravel/framework": "^6|^7.24|^8",
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
                 "orchestra/testbench-dusk": "^4|^5|^6|^7",
                 "phpunit/phpunit": "^6|^7|^8|^9",
                 "squizlabs/php_codesniffer": "^3.5"
@@ -589,15 +634,30 @@
             ],
             "support": {
                 "issues": "https://github.com/fruitcake/laravel-cors/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/fruitcake/laravel-cors/tree/v2.0.4"
             },
             "funding": [
                 {
+=======
+                "source": "https://github.com/fruitcake/laravel-cors/tree/v2.0.5"
+            },
+            "funding": [
+                {
+                    "url": "https://fruitcake.nl",
+                    "type": "custom"
+                },
+                {
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
                     "url": "https://github.com/barryvdh",
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2021-04-26T11:24:25+00:00"
+=======
+            "time": "2022-01-03T14:53:04+00:00"
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
         },
         {
             "name": "graham-campbell/result-type",
@@ -1184,6 +1244,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v8.77.1",
             "source": {
                 "type": "git",
@@ -1194,6 +1255,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/994dbac5c6da856c77c81a411cff5b7d31519ca8",
                 "reference": "994dbac5c6da856c77c81a411cff5b7d31519ca8",
+=======
+            "version": "v8.78.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "3b0e46985c65e06bfe3fafd2a28ab122667b20f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/3b0e46985c65e06bfe3fafd2a28ab122667b20f4",
+                "reference": "3b0e46985c65e06bfe3fafd2a28ab122667b20f4",
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
                 "shasum": ""
             },
             "require": {
@@ -1352,6 +1425,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2021-12-21T20:22:29+00:00"
         },
         {
@@ -1366,6 +1440,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/jetstream/zipball/05c4c0328c77a1d80f9ed8996a76a237a3f71123",
                 "reference": "05c4c0328c77a1d80f9ed8996a76a237a3f71123",
+=======
+            "time": "2022-01-04T16:23:21+00:00"
+        },
+        {
+            "name": "laravel/jetstream",
+            "version": "v2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/jetstream.git",
+                "reference": "190441d4a3553687f09fe33a74bfe203e6cae2c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/190441d4a3553687f09fe33a74bfe203e6cae2c2",
+                "reference": "190441d4a3553687f09fe33a74bfe203e6cae2c2",
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
                 "shasum": ""
             },
             "require": {
@@ -1418,7 +1508,11 @@
                 "issues": "https://github.com/laravel/jetstream/issues",
                 "source": "https://github.com/laravel/jetstream"
             },
+<<<<<<< HEAD
             "time": "2021-12-14T17:34:10+00:00"
+=======
+            "time": "2021-12-30T20:37:45+00:00"
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
         },
         {
             "name": "laravel/sanctum",
@@ -6643,6 +6737,7 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
+<<<<<<< HEAD
             "version": "1.5.1",
             "source": {
                 "type": "git",
@@ -6653,6 +6748,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/a12f7e301eb7258bb68acd89d4aefa05c2906cae",
                 "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae",
+=======
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/TypeResolver.git",
+                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/93ebd0014cab80c4ea9f5e297ea48672f1b87706",
+                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706",
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
                 "shasum": ""
             },
             "require": {
@@ -6687,9 +6794,15 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.1"
             },
             "time": "2021-10-02T14:08:47+00:00"
+=======
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.0"
+            },
+            "time": "2022-01-04T19:58:01+00:00"
+>>>>>>> f3c5af050e74fb7395df4163e3a293fa5568e80d
         },
         {
             "name": "phpspec/prophecy",
