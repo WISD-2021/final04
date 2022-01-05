@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Reserve extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'person',
+    ];
 }
