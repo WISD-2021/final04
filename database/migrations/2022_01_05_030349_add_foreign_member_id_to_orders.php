@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignTypeIdToItem extends Migration
+class AddForeignMemberIdToOrders extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddForeignTypeIdToItem extends Migration
      */
     public function up()
     {
-        Schema::table('items', function (Blueprint $table) {
-            $table->foreign('type_id')->references('id')->on('types');
+        Schema::table('orders', function (Blueprint $table) {
+            $table->foreign('member_id')->references('id')->on('members');
         });
     }
 
@@ -25,7 +25,7 @@ class AddForeignTypeIdToItem extends Migration
      */
     public function down()
     {
-        Schema::table('item', function (Blueprint $table) {
+        Schema::table('order', function (Blueprint $table) {
             //
         });
     }
