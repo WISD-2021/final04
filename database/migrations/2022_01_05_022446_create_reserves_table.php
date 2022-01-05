@@ -15,6 +15,11 @@ class CreateReservesTable extends Migration
     {
         Schema::create('reserves', function (Blueprint $table) {
             $table->id();
+            $table->Integer('member_id');
+            $table->foreign('member_id')->references('id')->on('members');
+            $table->Integer('table_id');
+            $table->foreign('table_id')->references('id')->on('tables');
+            $table->Integer('person');
             $table->timestamps();
         });
     }
