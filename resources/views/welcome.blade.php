@@ -30,7 +30,7 @@
                 </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">菜單</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('order') }}">菜單</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">線上預約</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登入</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">註冊</a></li>
