@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Item;
 use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
+use Illuminate\Support\Facades\DB;
 
 class ItemController extends Controller
 {
@@ -13,9 +14,16 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function item()
+    {
+        return view('item');
+    }
+
     public function index()
     {
-        //
+        $data = DB::table('items')->get();;
+        return view('item', ['item' => $data]);
     }
 
     /**

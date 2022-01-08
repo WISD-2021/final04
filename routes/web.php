@@ -22,4 +22,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/logout',[\App\Http\Controllers\UserController::class,'logout'])->name('user.logout');
-Route::get('order', 'App\Http\Controllers\OrderController@order')->name('order');
+Route::get('/item', 'App\Http\Controllers\ItemController@item')->name('item');
+Route::get('item.{resource function-name}');
