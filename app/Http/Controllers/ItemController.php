@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Item;
 use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\request;
 
 class ItemController extends Controller
 {
@@ -17,14 +19,12 @@ class ItemController extends Controller
 
     public function item()
     {
-        return view('item');
+        $data = DB::table('items')->get();
+        return view('item', ['item' => $data]);
+        
     }
 
-    public function index()
-    {
-        $data = DB::table('items')->get();;
-        return view('item', ['item' => $data]);
-    }
+
 
     /**
      * Show the form for creating a new resource.

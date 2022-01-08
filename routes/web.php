@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ItemController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,5 +24,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/logout',[\App\Http\Controllers\UserController::class,'logout'])->name('user.logout');
-Route::get('/item', 'App\Http\Controllers\ItemController@item')->name('item');
-Route::get('item.{resource function-name}');
+Route::get('/item',[\App\Http\Controllers\ItemController::class,'item'])->name('item');
+
