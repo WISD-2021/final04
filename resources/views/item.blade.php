@@ -46,10 +46,10 @@
             </div>
         </div>
     </header>
-    
+
             <!-- Main Content -->
             <br><br>
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4">
                 @foreach ($item as $items)
                     <div class="col mb-5">
                         <div class="card h-50">
@@ -68,7 +68,7 @@
             @endforeach
         </div>
     </div>
-           
+
         <!-- Footer-->
     <footer class="border-top">
         <div class="container px-4 px-lg-5">
