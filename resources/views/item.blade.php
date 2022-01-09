@@ -30,6 +30,7 @@
                 <li class="nav-item"><a class="nav-link" style="color:black" href="{{ route('item') }}">菜單</a></li>
                 <li class="nav-item"><a class="nav-link" style="color:black" href="{{ route('reserve') }}">線上預約</a></li>
                 <li class="nav-item"><a class="nav-link" style="color:black" href="{{ route('user.logout') }}">登出</a></li>
+                <li class="nav-item"><a class="nav-link" style="color:black" href="{{ route('order') }}">訂單</a></li>
                 <li class="nav-item"><a class="nav-link" style="color:black" href="{{ route('register') }}">註冊</a></li>
                 </ul>
             </div>
@@ -60,7 +61,7 @@
                                     </div>
                                 </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">加入餐點</a></div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('order.add',$items->id)}}">加入餐點</a></div>
                         </div>
                     </div>
                 </div>
