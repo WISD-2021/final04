@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Reserve;
 use App\Http\Requests\StoreReserveRequest;
 use App\Http\Requests\UpdateReserveRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\request;
 
 class ReserveController extends Controller
 {
@@ -15,8 +18,9 @@ class ReserveController extends Controller
      */
     public function reserve()
     {
-        return view('reserve');
+        //
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +29,7 @@ class ReserveController extends Controller
      */
     public function create()
     {
-        //
+        return view('reserve');
     }
 
     /**
@@ -36,7 +40,8 @@ class ReserveController extends Controller
      */
     public function store(StoreReserveRequest $request)
     {
-        //
+        Reserve::create($request->all());
+        return redirect()->route('reserve');
     }
 
     /**

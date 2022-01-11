@@ -61,7 +61,7 @@
                                     </div>
                                 </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('order.add',$items->id)}}">加入餐點</a></div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('order.store')}}">加入餐點</a></div>
                         </div>
                     </div>
                 </div>

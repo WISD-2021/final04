@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ReserveController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +28,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/logout',[\App\Http\Controllers\UserController::class,'logout'])->name('user.logout');
 Route::get('/item',[\App\Http\Controllers\ItemController::class,'item'])->name('item');
-Route::get('/reserve',[\App\Http\Controllers\ReserveController::class,'reserve'])->name('reserve');
+Route::get('/reserve/create',[\App\Http\Controllers\ReserveController::class,'create'])->name('reserve');
+Route::post('reserve',[\App\Http\Controllers\ReserveController::class,'store'])->name('reserve.store');
 Route::get('/order',[\App\Http\Controllers\OrderController::class,'order'])->name('order');
-Route::get('/order/{id}', [\App\Http\Controllers\OrderController::class, 'add'])->name('order.add');
-Route::get('/orderdelete/{id}', [\App\Http\Controllers\OderController::class, 'delete'])->name('order.delete');
+Route::post('order/store',[\App\Http\Controllers\OrderController::class,'store'])->name('order.store');
+//Route::get('/removeorder/{id}', 'OrderController@removeorder');
+//Route::get('/orders','OrderController@showorder');

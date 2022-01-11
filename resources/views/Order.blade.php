@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>線上預約</title>
+    <title>訂單</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
@@ -45,56 +45,73 @@
             </div>
         </div>
     </header>
+    
+            <!-- Main Content -->
+            <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>餐點</th>
+                    <th></th>
+                    <th class="text-center"></th>
+                    <th class="text-center">小計</th>
+                    <th> </th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($items as $item)
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                            <div class="media">
+                                <a class="thumbnail pull-left" href="#"> <img class="media-object" src="{{$item->product->imageurl}}" style="width: 100px; height: 72px;"> </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="#">{{$item->name}}</a></h4>
+                                </div>
+                            </div></td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                        </td>
+                        <td class="col-sm-1 col-md-1 text-center"></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>${{$item->name->money}}</strong></td>
+                        <td class="col-sm-1 col-md-1">
+                            <a href="/removeItem/{{$item->id}}"> <button type="button" class="btn btn-danger">
+                                    <span class="fa fa-remove"></span> 移除
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
 
-	<form action="/reserve" method="POST" class="form-horizontal">
-        {{ csrf_field() }}
-        @method('POST')
-        @csrf
+                <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td><h3>總共</h3></td>
+                    <td class="text-right"><h3><strong>${{$total}}</strong></h3></td>
+                </tr>
+                <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>
+                        <a href="/"> <button type="button" class="btn btn-default">
+                                <span class="fa fa-shopping-cart"></span> 繼續點餐
+                            </button>
+                        </a></td>
+                    <td>
+                        <button type="button" class="btn btn-success">
+                            結算 <span class="fa fa-play"></span>
+                        </button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-        <!-- 訂位名稱 -->
-        <br><br>
-            <div class="form-group" style="text-center">
-                <label for="reserve-name" class="col-sm-3 control-label">姓名</label>
-
-                <div class="col-sm-6">
-                    <input type="text" name="name" id="reserve-name" value="" class="form-control">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="reserve-person" class="col-sm-3 control-label">人數</label>
-
-                <div class="col-sm-6">
-                    <input type="text"  id="person"name="person" class="col-sm-2 control-label" value="">
-                </div>
-
-                <div class="form-group">
-                <label for="reserve-table_id" class="col-sm-3 control-label">桌號</label>
-
-                <div class="col-sm-6">
-                    <input type="text"  id="table_id"name="table_id" class="col-sm-2 control-label" value="">
-                </div>
-                
-                <div class="form-group">
-                <label for="reserve-date" class="col-sm-3 control-label">日期</label>
-
-                <div class="col-sm-6">
-                    <input type="date"  id="date"name="date" class="col-sm-2 control-label" value="">
-                </div>
-                
-            </div>
-            <br>
-            <!-- 確認訂位按鈕-->
-
-            <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-6">
-                        <a class="btn btn-outline-dark mt-auto" href="{{route('reserve.store')}}">確認預約</a>
-                </div>
-            </div>
-        </form>
-    </div>
-<!-- Footer-->
-<footer class="border-top">
+       
+           
+        <!-- Footer-->
+    <footer class="border-top">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
