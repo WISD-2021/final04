@@ -53,15 +53,13 @@ Route::prefix('admin')->group(function () {
 
     #預約管理
     Route::get('reserves',[ManagerReserveController::class,'index'])->name( 'admin.reserves.index');
-    #新增預約
-    Route::get('reserves/create',[ManagerReserveController::class,'create'])->name('admin.reserves.create');
     #編輯預約
     Route::get('reserves/{id}/edit',[ManagerReserveController::class,'edit'])->name('admin.reserves.edit');
     #儲存預約
     Route::post('reserves/store', [ManagerReserveController::class,'store'])->name('admin.reserves.store');
     #更新預約
-    Route::patch('reserves/{item}', [ManagerReserveController::class, 'update'])->name('admin.reserves.update');
+    Route::patch('reserves/{reserve}', [ManagerReserveController::class, 'update'])->name('admin.reserves.update');
     #刪除預約
-    Route::delete('reserves/{item}', [ManagerReserveController::class, 'destroy'])->name('admin.reserves.destroy');
+    Route::delete('reserves/{reserve}', [ManagerReserveController::class, 'destroy'])->name('admin.reserves.destroy');
 });
 

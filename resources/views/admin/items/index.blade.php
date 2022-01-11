@@ -45,7 +45,7 @@
                         <td style="text-align: center; line-height:100px;">{{ $items->id }}</td>
                         <td style="text-align: center"><img src="img/{{ $items->image }}" style="height:100px; width:auto;" alt="..." /></td>
                         <td style="line-height:100px;">{{ $items->name }}</td>
-                        <td style="text-align: center; line-height:100px;">{{ $items->money }}</td>
+                        <td style="text-align: center; line-height:100px;">${{ $items->money }}</td>
                         @foreach($type as $types)
                             @if($items->type_id == $types->id)
                                 <td style="text-align: center; line-height:100px;">{{ $types->name }}</td>
