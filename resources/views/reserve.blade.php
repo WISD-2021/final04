@@ -74,14 +74,14 @@
                 <div class="col-sm-6">
                     <input type="text"  id="table_id"name="table_id" class="col-sm-2 control-label" value="">
                 </div>
-                
+
                 <div class="form-group">
                 <label for="reserve-date" class="col-sm-3 control-label">日期</label>
 
                 <div class="col-sm-6">
                     <input type="date"  id="date"name="date" class="col-sm-2 control-label" value="">
                 </div>
-                
+
             </div>
             <br>
             <!-- 確認訂位按鈕-->

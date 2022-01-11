@@ -53,7 +53,7 @@
                 @foreach ($item as $items)
                     <div class="col mb-5">
                         <div class="card h-50">
-                            <img class="card-img-top" src="assets/img/{{$items->image}}" alt="..." />
+                            <img class="card-img-top" src="admin/img/{{$items->image}}" alt="..." />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">{{$items->name}}</h5>
