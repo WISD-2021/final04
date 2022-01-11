@@ -20,6 +20,14 @@
         <section class="py-5">
         <br><br>
         <center>
+        <div class="form-group" style="text-center" hidden>
+                <label for="reserve-name" class="col-sm-3 control-label">姓名</label>
+
+                <div class="col-sm-6">
+                    <?php echo "<input type='text' name='member_id' id='reserve-name' value='".auth()->user()->id ."' >";?>
+                </div>
+            </div>
+
             <div class="form-group" style="text-center">
                 <label for="reserve-name" class="col-sm-3 control-label">姓名</label>
 
@@ -55,7 +63,7 @@
 
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-6">
-                        <a class="btn btn-outline-dark mt-auto" href="{{route('reserve.store')}}">確認預約</a>
+                <button type="submit" class="btn btn-success">確認預約</button>
                 </div>
             </div>
         </form>

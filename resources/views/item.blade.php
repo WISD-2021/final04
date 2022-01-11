@@ -5,7 +5,7 @@
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="site">
+                    <div class="site-heading">
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('order.store')}}">加入餐點</a></div>
+                            <center><button type="submit" class="btn btn-outline-success mt-auto" name="items_id" value="{{$items->id}}">加入餐點</button></center>
                         </div>
                     </div>
                 </div>

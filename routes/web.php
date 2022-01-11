@@ -28,8 +28,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/logout',[\App\Http\Controllers\UserController::class,'logout'])->name('user.logout');
 Route::get('/item',[\App\Http\Controllers\ItemController::class,'item'])->name('item');
 Route::get('/reserve/create',[\App\Http\Controllers\ReserveController::class,'create'])->name('reserve');
-Route::post('reserve',[\App\Http\Controllers\ReserveController::class,'store'])->name('reserve.store');
-Route::get('/order',[\App\Http\Controllers\OrderController::class,'order'])->name('order');
+Route::post('/reserve', [\App\Http\Controllers\ReserveController::class,'store'])->name('reserve.store');
+Route::get('/order/create',[\App\Http\Controllers\OrderController::class,'create'])->name('order.create');
+Route::get('/order',[\App\Http\Controllers\OrderController::class,'index'])->name('order.index');
 Route::post('order/store',[\App\Http\Controllers\OrderController::class,'store'])->name('order.store');
 
 #後台
