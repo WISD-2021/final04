@@ -32,6 +32,7 @@
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                 <li class="nav-item"><a class="nav-link" href="{{ route('item') }}">菜單</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('reserve') }}">線上預約</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('order') }}">訂單</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('user.logout') }}">登出</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">註冊</a></li>
                 </ul>
