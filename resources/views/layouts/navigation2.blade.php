@@ -11,7 +11,7 @@
             <ul class="navbar-nav ms-auto py-4 py-lg-0">
                 <li class="nav-item"><a class="nav-link" href="{{ route('item') }}">菜單</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('reserve') }}">線上預約</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('order') }}">訂單</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('order.index') }}">訂單</a></li>
                 @if(\Illuminate\Support\Facades\Auth::check())
                     @if(Auth::user()->type == '0')
                         <script>alert('管理者登入成功');window.location.href='{{ route('admin.dashboard.index') }}'</script>

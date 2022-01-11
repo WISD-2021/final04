@@ -55,7 +55,11 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        $name=Auth::user()->name;
+        $name=Auth::user()->id;
+        $food=Order::where('id',$id)->get();
+        $data=['order'=>$food,'name'=>$name];
+        return view('order',$data);
     }
 
     /**

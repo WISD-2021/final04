@@ -14,7 +14,11 @@ class OrderController extends Controller
 {
     public function index ()
     {
-        //  
+        $name=Auth::user()->id;
+        $orders=Order::where('id',$name)->get();
+        $data=['orders'=>$orders];
+        #dd($data);
+        return view('order',$data);
      }
 
     public function create()
@@ -28,7 +32,7 @@ class OrderController extends Controller
      * @param  \App\Http\Requests\StoreOrderRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreOrderRequest $request)
+    public function store(Request $request)
     {
         Order::create($request->all());
         return redirect()->route('order')->with('status','系統提示：餐點已加入');
@@ -77,6 +81,7 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         Order::destroy($id);
-        return redirect()->route('order');
+        return redirect()->route('order.index');
     }
 }
+

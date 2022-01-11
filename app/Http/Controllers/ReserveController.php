@@ -41,7 +41,7 @@ class ReserveController extends Controller
     public function store(StoreReserveRequest $request)
     {
         Reserve::create($request->all());
-        return redirect()->route('reserve');
+        return redirect()->route('dashboard');
     }
 
     /**

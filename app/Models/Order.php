@@ -23,4 +23,11 @@ class Order extends Model
     {
         return $this->hasMany(Item::class);
     }
+
+    protected $fillable = [
+        'id',
+        'member_id',
+        'total',
+        'status',
+    ];
 }
