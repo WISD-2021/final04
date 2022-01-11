@@ -10,9 +10,11 @@ class Item extends Model
     use HasFactory;
 
     protected $fillable = [
+        'type_id',
         'name',
         'money',
         'image',
+        'status',
     ];
 
     public function members()
