@@ -116,7 +116,7 @@
                                     <span class="txt">午餐:11:30-14:00 / 晚餐:17:30-21:00</span>
                                 </div>
                             </li>
-                        </ul>`
+                        </ul>
                     </h5>
                 </div>
                 <!-- Divider-->
