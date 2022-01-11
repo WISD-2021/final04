@@ -33,9 +33,18 @@ Route::get('/logout',[\App\Http\Controllers\UserController::class,'logout'])->na
 Route::get('/item',[\App\Http\Controllers\ItemController::class,'item'])->name('item');
 Route::get('/reserve/create',[\App\Http\Controllers\ReserveController::class,'create'])->name('reserve');
 Route::post('/reserve', [\App\Http\Controllers\ReserveController::class,'store'])->name('reserve.store');
-Route::get('/order/create',[\App\Http\Controllers\OrderController::class,'create'])->name('order.create');
-Route::get('/order',[\App\Http\Controllers\OrderController::class,'index'])->name('order.index');
-Route::post('order/store',[\App\Http\Controllers\OrderController::class,'store'])->name('order.store');
+#商品加入購物車資料表
+Route::post('/cart/store',[\App\Http\Controllers\CartController::class,'store'])->name('cart.store');
+#購物車頁面
+Route::get('/cart/index',[\App\Http\Controllers\CartController::class,'index'])->name('cart.index');
+#從購物車刪除商品
+Route::delete('/cart/destroy/{id}',[\App\Http\Controllers\CartController::class,'destroy'])->name('cart.destroy');
+#結帳頁面
+Route::get('/cart/checkout',[\App\Http\Controllers\CartController::class,'checkout'])->name('cart.checkout');
+#送出訂單
+Route::get('/cart/end',[\App\Http\Controllers\CartController::class,'end'])->name('cart.end');
+#訂單頁面
+Route::get('/order',[\App\Http\Controllers\OrderController::class,'index'])->name('order');
 
 #後台
 Route::prefix('admin')->group(function () {

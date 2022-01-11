@@ -12,66 +12,60 @@
     </header>
     
             <!-- Main Content -->
-            <section class="py-5">
-            <div class="row">
-        <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>餐點</th>
-                    <th></th>
-                    <th class="text-center"></th>
-                    <th class="text-center">小計</th>
-                    <th> </th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($items as $item)
-                    <tr>
-                        <td class="col-sm-8 col-md-6">
-                            <div class="media">
-                                <a class="thumbnail pull-left" href="#"> <img class="media-object" src="{{$item->product->imageurl}}" style="width: 100px; height: 72px;"> </a>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="#">{{$item->name}}</a></h4>
-                                </div>
-                            </div></td>
-                        <td class="col-sm-1 col-md-1" style="text-align: center">
-                        </td>
-                        <td class="col-sm-1 col-md-1 text-center"></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>${{$item->name->money}}</strong></td>
-                        <td class="col-sm-1 col-md-1">
-                            <a href="/removeItem/{{$item->id}}"> <button type="button" class="btn btn-danger">
-                                    <span class="fa fa-remove"></span> 移除
-                                </button>
-                            </a>
-                        </td>
-                    </tr>
-                @endforeach
+            <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 mx-auto">
 
-                <tr>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>   </td>
-                    <td><h3>總共</h3></td>
-                    <td class="text-right"><h3><strong>${{$total}}</strong></h3></td>
-                </tr>
-                <tr>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>
-                        <a href="/"> <button type="button" class="btn btn-default">
-                                <span class="fa fa-shopping-cart"></span> 繼續點餐
-                            </button>
-                        </a></td>
-                    <td>
-                        <button type="button" class="btn btn-success">
-                            結算 <span class="fa fa-play"></span>
-                        </button></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div> 
-</section>
+                @csrf
+                @if(count($orders)>0)
+
+                    @if(session()->has('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    <br><br>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th width="15%" style="text-align: center">訂單編號</th>
+                            <th width="20%" style="text-align: center">付款方式</th>
+                            <th width="25%" style="text-align: center">總金額</th>
+                            <th width="25%" style="text-align: center">訂單狀態</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($orders as $order)
+
+                            <tr>
+                                <td style="text-align: center">
+                                    {{$order->id}}
+                                </td>
+                                <td style="text-align: center">
+                                    {{$order->method}}<br>
+                                </td>
+                                <td style="text-align: center">
+                                    {{($order->total)}}
+                                </td>
+                                <td style="text-align: center">
+                                    {{($order->status)}}
+                                </td>
+                            </tr>
+
+                        @endforeach
+                        </tbody>
+                    </table>
+
+                @else
+                    <div style="text-align: center">
+                        <div class="title-box">
+                            <h2>您尚未訂購過任何商品</h2>
+                        </div>
+                    </div>
+                @endif
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
 @endsection

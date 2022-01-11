@@ -11,9 +11,11 @@
             <ul class="navbar-nav ms-auto py-4 py-lg-0">
                 <li class="nav-item"><a class="nav-link" style="color:black" href="{{ route('item') }}">菜單</a></li>
                 <li class="nav-item"><a class="nav-link" style="color:black" href="{{ route('reserve') }}">線上預約</a></li>
-                <li class="nav-item"><a class="nav-link" style="color:black" href="{{ route('order.index') }}">訂單</a></li>
+                <li class="nav-item"><a class="nav-link" style="color:black" href="{{route('cart.index')}}">購物車</a></li>
+                <li class="nav-item"><a class="nav-link" style="color:black" href="{{ route('cart.checkout') }}">結帳</a></li>
+                <li class="nav-item"><a class="nav-link" style="color:black" href="{{ route('order') }}">訂單</a></li>
                 @if(\Illuminate\Support\Facades\Auth::check())
-                    @if(Auth::user()->type == '0')
+                    @if(Auth::user()->type == '1')
                         <script>alert('管理者登入成功');window.location.href='{{ route('admin.dashboard.index') }}'</script>
                     @else
                         <li class="nav-item dropdown">
