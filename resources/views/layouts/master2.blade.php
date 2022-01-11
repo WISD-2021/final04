@@ -18,7 +18,7 @@
 </head>
 <body>
 <!-- Navigation -->
-@include('layouts.navigation')
+@include('layouts.navigation2')
 @yield('content')
 <!-- Footer -->
 @include('layouts.footer')
