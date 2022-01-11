@@ -19,11 +19,12 @@
         <!-- 訂位名稱 -->
         <section class="py-5">
         <br><br>
+        <center>
             <div class="form-group" style="text-center">
                 <label for="reserve-name" class="col-sm-3 control-label">姓名</label>
 
                 <div class="col-sm-6">
-                    <input type="text" name="name" id="reserve-name" value="" class="form-control">
+                    <input type="text" name="name" id="reserve-name" value="" >
                 </div>
             </div>
 
@@ -31,21 +32,21 @@
                 <label for="reserve-person" class="col-sm-3 control-label">人數</label>
 
                 <div class="col-sm-6">
-                    <input type="text"  id="person"name="person" class="col-sm-2 control-label" value="">
+                    <input type="text"  id="person"name="person" value="">
                 </div>
 
                 <div class="form-group">
                 <label for="reserve-table_id" class="col-sm-3 control-label">桌號</label>
 
                 <div class="col-sm-6">
-                    <input type="text"  id="table_id"name="table_id" class="col-sm-2 control-label" value="">
+                    <input type="text"  id="table_id"name="table_id" value="">
                 </div>
                 
                 <div class="form-group">
                 <label for="reserve-date" class="col-sm-3 control-label">日期</label>
 
                 <div class="col-sm-6">
-                    <input type="date"  id="date"name="date" class="col-sm-2 control-label" value="">
+                    <input type="date"  id="date"name="date" class="col-sm-5 control-label" value="">
                 </div>
                 
             </div>
@@ -59,5 +60,6 @@
             </div>
         </form>
     </div>
+    </center>
     </section>
 @endsection
