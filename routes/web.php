@@ -21,10 +21,6 @@ use App\Http\Controllers\ReserveController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
@@ -47,12 +43,24 @@ Route::prefix('admin')->group(function () {
     Route::get('items/create',[ManagerItemController::class,'create'])->name('admin.items.create');
     #編輯餐點
     Route::get('items/{id}/edit',[ManagerItemController::class,'edit'])->name('admin.items.edit');
-
     #儲存餐點
     Route::post('items/store', [ManagerItemController::class,'store'])->name('admin.items.store');
     #更新餐點
     Route::patch('items/{item}', [ManagerItemController::class, 'update'])->name('admin.items.update');
     #刪除餐點
     Route::delete('items/{item}', [ManagerItemController::class, 'destroy'])->name('admin.items.destroy');
+
+    #預約管理
+    Route::get('reserves',[ManagerReserveController::class,'index'])->name( 'admin.reserves.index');
+    #新增預約
+    Route::get('reserves/create',[ManagerReserveController::class,'create'])->name('admin.reserves.create');
+    #編輯預約
+    Route::get('reserves/{id}/edit',[ManagerReserveController::class,'edit'])->name('admin.reserves.edit');
+    #儲存預約
+    Route::post('reserves/store', [ManagerReserveController::class,'store'])->name('admin.reserves.store');
+    #更新預約
+    Route::patch('reserves/{item}', [ManagerReserveController::class, 'update'])->name('admin.reserves.update');
+    #刪除預約
+    Route::delete('reserves/{item}', [ManagerReserveController::class, 'destroy'])->name('admin.reserves.destroy');
 });
 

@@ -26,7 +26,7 @@
                 </li>
                 <li class="divider"></li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                    <a href="{{ route('user.logout') }}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                 </li>
             </ul>
         </li>
@@ -41,7 +41,7 @@
                 <a href="{{ route('admin.items.index') }}"><i class="fa fa-fw fa-coffee"></i> 餐點管理</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-fw fa-clock-o"></i> 預約管理</a>
+                <a href="{{ route('admin.reserves.index') }}"><i class="fa fa-fw fa-clock-o"></i> 預約管理</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-fw fa-bed"></i> 座位管理</a>
