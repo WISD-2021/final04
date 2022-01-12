@@ -34,36 +34,37 @@
 
 <body>
 
-    <div id="wrapper">
+<div id="wrapper">
 
-        @include('admin.layouts.partials.sidebar')
+    @include('admin.layouts.partials.sidebar')
 
-        <div id="page-wrapper">
+    <div id="page-wrapper">
 
-            <div class="container-fluid">
+        <div class="container-fluid">
 
-                @yield('content')
-
-            </div>
-            <!-- /.container-fluid -->
+            @yield('content')
 
         </div>
-        <!-- /#page-wrapper -->
+        <!-- /.container-fluid -->
 
     </div>
-    <!-- /#wrapper -->
+    <!-- /#page-wrapper -->
 
-    <!-- jQuery -->
-    <script src="{{ asset('js/jquery.js') }}"></script>
+</div>
+<!-- /#wrapper -->
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<!-- jQuery -->
+<script src="{{ asset('js/jquery.js') }}"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="{{ asset('js/plugins/morris/raphael.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/morris/morris.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/morris/morris-data.js') }}"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="{{ asset('js/plugins/morris/raphael.min.js') }}"></script>
+<script src="{{ asset('js/plugins/morris/morris.min.js') }}"></script>
+<script src="{{ asset('js/plugins/morris/morris-data.js') }}"></script>
 
 </body>
 
 </html>
+

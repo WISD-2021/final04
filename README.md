@@ -24,7 +24,7 @@
 ![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/tableadd.png)
 # 修改座位
 ![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/tableedit.png)
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
 # ERD
 ![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/erd.png)
 # 資料庫綱要圖
