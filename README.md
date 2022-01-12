@@ -1,33 +1,51 @@
 # 首頁
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/assets/img/home1.jpg)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/home.png)
 # 菜單
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/assets/img/menu.jpg)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/menu.png)
 # 線上預約
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/assets/img/reserve.jpg)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/reserve.png)
 # 查看歷史訂單紀錄
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/confirm.png)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/order.png)
 # 管理者頁面
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/home2.jpg)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/adminmain.png)
+# 餐點管理
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/item.png)
+# 新增餐點
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/itemadd.png)
+# 修改餐點
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/itemedit.png)
+# 預約管理
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/mreserve.png)
+# 修改預約
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/mreserveedit.png)
+# 座位管理
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/table.png)
+# 新增座位
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/tableadd.png)
+# 修改座位
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/tableedit.png)
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # ERD
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/erd1.jpg)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/erd.png)
 # 資料庫綱要圖
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/erd2.jpg)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/database1.png)
 # 資料表欄位設計
 ## 使用者資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/t1.jpg)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/usertable.png)
 ## 會員資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/t2.jpg)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/membertable.png)
 ## 管理者資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/t3.jpg)
-## 購物車商品資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/t4.jpg)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/admintable.png)
 ## 訂單資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/t5.jpg)
-## 商品資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/t6.jpg)
-## 我的最愛資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/img/t7.jpg)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/ordertable.png)
+## 預約資料表
+![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/readme/reservetable.png)
+## 座位資料表
+![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/readme/tabletable.png)
+## 餐點資料表
+![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/readme/itemtable.png)
+## 餐點類別資料表
+![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/readme/typetable.png)
 # 系統主要功能
 * 會員:
   * 會員能查看菜單
@@ -90,20 +108,42 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
    * Route::get('/logout',[\App\Http\Controllers\UserController::class,'logout'])->name('user.logout');
 
 # 後台：[3A832058 柯昕廷](http://github.com/3A832058)
-  #後台
-    * Route::prefix('admin')->group(function () {
-  #主控台
-    * Route::get('/', [ManagerController::class,'index'])->name( 'admin.dashboard.index');
-  #餐點管理
-    * Route::get('items',[ManagerItemController::class,'index'])->name( 'admin.items.index');
-  #新增餐點
-    * Route::get('items/create',[ManagerItemController::class,'create'])->name('admin.items.create');
-  #編輯餐點
-    * Route::get('items/{id}/edit',[ManagerItemController::class,'edit'])->name('admin.items.edit');
-  #儲存餐點
-    * Route::post('items/store', [ManagerItemController::class,'store'])->name('admin.items.store');
-  #更新餐點
-    * Route::patch('items/{item}', [ManagerItemController::class, 'update'])->name('admin.items.update');
-  #刪除餐點
-    * Route::delete('items/{item}', [ManagerItemController::class, 'destroy'])->name('admin.items.destroy');
+* //後台
+  *Route::prefix('admin')->group(function () {
+* //主控台
+  * Route::get('/', [ManagerController::class,'index'])->name( 'admin.dashboard.index');
+* //餐點管理
+  * Route::get('items',[ManagerItemController::class,'index'])->name( 'admin.items.index');
+* //新增餐點
+  * Route::get('items/create',[ManagerItemController::class,'create'])->name('admin.items.create');
+* //編輯餐點
+  * Route::get('items/{id}/edit',[ManagerItemController::class,'edit'])->name('admin.items.edit');
+* //儲存餐點
+  * Route::post('items/store', [ManagerItemController::class,'store'])->name('admin.items.store');
+* //更新餐點
+  * Route::patch('items/{item}', [ManagerItemController::class, 'update'])->name('admin.items.update');
+* //刪除餐點
+  * Route::delete('items/{item}', [ManagerItemController::class, 'destroy'])->name('admin.items.destroy');
+* //預約管理
+  * Route::get('reserves',[ManagerReserveController::class,'index'])->name( 'admin.reserves.index');
+* //編輯預約
+  * Route::get('reserves/{id}/edit',[ManagerReserveController::class,'edit'])->name('admin.reserves.edit');
+* //儲存預約
+  * Route::post('reserves/store', [ManagerReserveController::class,'store'])->name('admin.reserves.store');
+* //更新預約
+  * Route::patch('reserves/{reserve}', [ManagerReserveController::class, 'update'])->name('admin.reserves.update');
+* //刪除預約
+  * Route::delete('reserves/{reserve}', [ManagerReserveController::class, 'destroy'])->name('admin.reserves.destroy');
+* //餐桌管理
+  * Route::get('tables',[ManagerTableController::class,'index'])->name( 'admin.tables.index');
+* //新增餐桌
+  * Route::get('tables/create',[ManagerTableController::class,'create'])->name('admin.tables.create');
+* //編輯餐桌
+  * Route::get('tables/{id}/edit',[ManagerTableController::class,'edit'])->name('admin.tables.edit');
+* //儲存餐桌
+  * Route::post('tables/store', [ManagerTableController::class,'store'])->name('admin.tables.store');
+* //更新餐桌
+  * Route::patch('tables/{table}', [ManagerTableController::class, 'update'])->name('admin.tables.update');
+* //刪除餐桌
+  * Route::delete('tables/{table}', [ManagerTableController::class, 'destroy'])->name('admin.tables.destroy');
 });
