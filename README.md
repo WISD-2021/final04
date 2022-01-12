@@ -28,7 +28,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # ERD
 ![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/erd.png)
 # 資料庫綱要圖
-![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/database1.png)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/database.png)
 # 資料表欄位設計
 ## 使用者資料表
 ![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/usertable.png)
@@ -39,13 +39,13 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## 訂單資料表
 ![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/ordertable.png)
 ## 預約資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/readme/reservetable.png)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/reservetable.png)
 ## 座位資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/readme/tabletable.png)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/tabletable.png)
 ## 餐點資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/readme/itemtable.png)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/itemtable.png)
 ## 餐點類別資料表
-![image](https://raw.githubusercontent.com/WISD-2021/final02/master/public/readme/typetable.png)
+![image](https://raw.githubusercontent.com/WISD-2021/final04/master/public/readme/typetable.png)
 # 系統主要功能
 * 會員:
   * 會員能查看菜單
