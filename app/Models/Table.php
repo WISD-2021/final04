@@ -9,6 +9,12 @@ class Table extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'id',
+        'number',
+        'status',
+    ];
+
     public function reserves()
     {
         return $this->belongsTo(Reserve::class);

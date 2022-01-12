@@ -15,6 +15,7 @@
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 管理員 <b class="caret"></b></a>
             <ul class="dropdown-menu">
+                <!--
                 <li>
                     <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
                 </li>
@@ -24,7 +25,8 @@
                 <li>
                     <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
                 </li>
-                <li class="divider"></li>
+
+                <li class="divider"></li> -->
                 <li>
                     <a href="{{ route('user.logout') }}"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                 </li>
@@ -34,7 +36,7 @@
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-            <li class="active">
+            <li>
                 <a href="{{ route('admin.dashboard.index') }}"><i class="fa fa-fw fa-dashboard"></i> 主控台</a>
             </li>
             <li>
@@ -44,7 +46,7 @@
                 <a href="{{ route('admin.reserves.index') }}"><i class="fa fa-fw fa-clock-o"></i> 預約管理</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-fw fa-bed"></i> 座位管理</a>
+                <a href="{{ route('admin.tables.index') }}"><i class="fa fa-fw fa-bed"></i> 座位管理</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-fw fa-list"></i> 訂單管理</a>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\ManagerItemController;
 use App\Http\Controllers\ManagerReserveController;
+use App\Http\Controllers\ManagerTableController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ItemController;
@@ -21,7 +22,9 @@ use App\Http\Controllers\ReserveController;
 |
 */
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
     return view('dashboard');
 })->name('dashboard');
 
@@ -61,5 +64,18 @@ Route::prefix('admin')->group(function () {
     Route::patch('reserves/{reserve}', [ManagerReserveController::class, 'update'])->name('admin.reserves.update');
     #刪除預約
     Route::delete('reserves/{reserve}', [ManagerReserveController::class, 'destroy'])->name('admin.reserves.destroy');
+
+    #餐桌管理
+    Route::get('tables',[ManagerTableController::class,'index'])->name( 'admin.tables.index');
+    #新增餐桌
+    Route::get('tables/create',[ManagerTableController::class,'create'])->name('admin.tables.create');
+    #編輯餐桌
+    Route::get('tables/{id}/edit',[ManagerTableController::class,'edit'])->name('admin.tables.edit');
+    #儲存餐桌
+    Route::post('tables/store', [ManagerTableController::class,'store'])->name('admin.tables.store');
+    #更新餐桌
+    Route::patch('tables/{table}', [ManagerTableController::class, 'update'])->name('admin.tables.update');
+    #刪除餐桌
+    Route::delete('tables/{table}', [ManagerTableController::class, 'destroy'])->name('admin.tables.destroy');
 });
 

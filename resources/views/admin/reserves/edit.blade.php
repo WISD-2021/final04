@@ -48,7 +48,9 @@
                 <label for="title">桌號：</label>
                 <select id="table_id" name="table_id" class="form-control" >
                     @foreach($table as $tables)
-                        <option @if($reserve->table_id == $tables->id) selected="selected" @endif value="{{ $tables->id }}">{{ $tables->number }}桌</option>
+                        @if($tables->status != 1)
+                            <option @if($reserve->table_id == $tables->id) selected="selected" @endif value="{{ $tables->id }}">{{ $tables->number }}桌</option>
+                        @endif
                     @endforeach
                 </select>
             </div>
